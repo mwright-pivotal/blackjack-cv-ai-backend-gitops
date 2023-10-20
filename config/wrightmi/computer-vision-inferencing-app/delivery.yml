@@ -41,12 +41,12 @@ spec:
         - name: VIDEO_INPUT
           value: starwars-sample.mp4
         - name: ACCELERATION_DEVICE
-          value: CPU
+          value: GPU
         - name: INFERENCING_MODEL
           value: custom_models/saved_model.xml
         - name: LABELS_FILE
           value: starwars_labels.txt
-        image: harbor.eqix.vmwedge.com/apps/computer-vision-inferencing-app-wrightmi@sha256:5f020dd660cf6a0c5dc8d75c12f4592d357e9158c8e542bab7e1eaf2f0a27c35
+        image: harbor.services.edge.wrightcode.io:9443/library/blackjack-backend:1.0
         name: workload
         resources: {}
         securityContext:
