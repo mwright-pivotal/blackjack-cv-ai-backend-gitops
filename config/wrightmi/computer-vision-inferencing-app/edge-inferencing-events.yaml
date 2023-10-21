@@ -16,6 +16,15 @@ spec:
       - rabbitmq_stream
   persistence:
     storageClassName: local-path
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - keswick-wrkr.lan
 ---
 apiVersion: rabbitmq.com/v1beta1
 kind: User
