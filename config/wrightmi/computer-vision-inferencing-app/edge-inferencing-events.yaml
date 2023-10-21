@@ -2,6 +2,7 @@ apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
   name: edge-inferencing-events
+  namespace: default
 spec:
   replicas: 1
   service:
@@ -20,6 +21,7 @@ apiVersion: rabbitmq.com/v1beta1
 kind: User
 metadata:
   name: cv-system
+  namespace: default
 spec:
   tags:
   - administrator
@@ -30,6 +32,7 @@ apiVersion: rabbitmq.com/v1beta1
 kind: Vhost
 metadata:
   name: edge-vhost
+  namespace: default
 spec:
   name: edge-vhost # vhost name
   rabbitmqClusterReference:
@@ -39,6 +42,7 @@ apiVersion: rabbitmq.com/v1beta1
 kind: Exchange
 metadata:
   name: cv-exchange
+  namespace: default
 spec:
   name: cv-exchange # name of the exchange
   type: direct # default to 'direct' if not provided; can be set to 'direct', 'fanout', 'headers', and 'topic'
@@ -52,6 +56,7 @@ apiVersion: rabbitmq.com/v1beta1
 kind: Binding
 metadata:
   name: binding
+  namespace: default
 spec:
   vhost: edge-vhost # default to '/' if not provided
   source: cv-exchange # an existing exchange
@@ -66,6 +71,7 @@ metadata:
   name: cv-events
 spec:
   name: cv-events # name of the queue
+  namespace: default
   vhost: edge-vhost # default to '/' if not provided
   autoDelete: false
   durable: true # seting 'durable' to false means this queue won't survive a server restart
@@ -76,6 +82,7 @@ apiVersion: rabbitmq.com/v1beta1
 kind: Permission
 metadata:
   name: edge-permission
+  namespace: default
 spec:
   vhost: edge-vhost
   userReference:
