@@ -70,6 +70,12 @@ spec:
               name: edge-inferencing-events-default-user
               key: password
               optional: true
+        - name: VIDEO_INPUT
+          valueFrom:
+            secretKeyRef:
+              name: source_info
+              key: video_source
+              optional: true
         image: harbor.services.edge.wrightcode.io:9443/library/blackjack-backend:1.0
         name: workload
         resources:
