@@ -41,9 +41,7 @@ spec:
         - name: ACCELERATION_DEVICE
           value: GPU
         - name: INFERENCING_MODEL
-          value: custom_models/saved_model.xml
-        - name: LABELS_FILE
-          value: starwars_labels.txt
+          value: models/quantized_cards_detect-1023.xml
         - name: AMQP_HOSTNAME
           valueFrom:
             secretKeyRef:
@@ -74,7 +72,7 @@ spec:
               name: source-info
               key: video-source
               optional: true
-        image: harbor.services.edge.wrightcode.io:9443/library/blackjack-backend:1.1
+        image: harbor.services.edge.wrightcode.io:9443/library/blackjack-backend:1.2
         name: workload
         resources:
           limits:
