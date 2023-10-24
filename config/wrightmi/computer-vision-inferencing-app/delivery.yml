@@ -41,7 +41,7 @@ spec:
         - name: ACCELERATION_DEVICE
           value: GPU
         - name: INFERENCING_MODEL
-          value: models/quantized_cards_detect-1023.xml
+          value: models/quantized_cards_detect-1023
         - name: AMQP_HOSTNAME
           valueFrom:
             secretKeyRef:
