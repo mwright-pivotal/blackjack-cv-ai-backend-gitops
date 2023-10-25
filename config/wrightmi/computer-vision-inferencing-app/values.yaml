@@ -1,0 +1,79 @@
+nameOverride: ""
+fullnameOverride: ""
+
+# Our image pull secret and our OCI registry point to the same place; the former used by Kubernetes
+# to launch containers and the latter for the application to pull artifacts at runtime.
+
+ociRegistry:
+  registry: harbor.services.edge.wrightcode.io:9443
+  email: ""
+  username: ""
+  password: ""
+
+podAnnotations: {}
+
+service:
+  type: ClusterIP
+  port: 8080
+
+engine:
+  cpus: 4            # `cpus` in wallaroo.deployment_config
+  memory: 3Gi        # `memory` in wallaroo.deployment_config
+  pipelineUrl: harbor.services.edge.wrightcode.io:9443/wallaroo/pipelines/yolo8demonstration-card:24903487-a8e2-4b41-a9e5-8ae43bc522cb    # the value of the PIPELINE_URL environment variable
+
+  # Arbitrary additional env for engine. For example,
+  # extraEnv:
+  #   - name: DEBUG
+  #     value: "true"
+  extraEnv: []
+
+image:
+  repository: harbor.services.edge.wrightcode.io:9443/wallaroo/engines/proxy/wallaroo/ghcr.io/wallaroolabs/standalone-mini
+  pullPolicy: IfNotPresent
+  tag: ""                       # Overrides the image tag whose default is the chart appVersion.
+
+# How many engine pods to deploy
+replicas: 1
+
+# Sidekicks are MLFLow services called only by the engine. There is potentially more
+# than one sidekick so they are parameterized by the Operations Center when published.
+engineAux:
+  pullPolicy: IfNotPresent
+  env: []
+  affinity: {}
+  tolerations: []
+  resources: {}
+  nodeSelector: {}
+
+# The deployment strategy to use to replace existing pods with new ones, using one of two
+# strategies. Rolling update strategy allows Deployments' update to take place with zero downtime
+# by incrementally updating Pods instances with new ones. In Recreate strategy, all existing Pods
+# are killed before new ones are created.
+rollingUpdate:
+  enabled: true                 # Use the rolling update strategy if enabled.
+  maxSurge: "100%"              # percentage of pods that can be created above the desired number of replicas
+  maxUnavailable: "50%"         # percentage of pods that can be unavailable during an update
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: {}
+
+affinity: {}

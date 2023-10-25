@@ -1,0 +1,21 @@
+# Source: deployer/templates/orchestra-deployment.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: engine-svc
+  labels:
+    app.kubernetes.io/name: engine
+    app.kubernetes.io/component: inference
+    app.kubernetes.io/part-of: wallaroo
+spec:
+  selector:
+    app: engine
+  ports:
+  - name: http-inference
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.service.port }}
+  - name: metrics
+    port: 9000
+    targetPort: 9000
+  clusterIP: None
+  type: {{ .Values.service.type }}
