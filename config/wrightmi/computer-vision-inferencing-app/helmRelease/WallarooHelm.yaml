@@ -32,6 +32,5 @@ spec:
     enable: true
   values:
     ociRegistry:
-      ociUsername: admin
-      ociPassword: dummy
-      ociRegistry: harbor.services.edge.wrightcode.io:9443
+      username: admin
+      password: dummy
