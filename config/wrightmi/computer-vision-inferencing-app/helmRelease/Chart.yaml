@@ -1,7 +1,0 @@
-apiVersion: v2
-appVersion: v2023.3.0-3833
-description: A Helm chart for Kubernetes
-icon: https://images.squarespace-cdn.com/content/v1/5fb9935f9e259c7340e1c158/1e38d9b7-df16-416f-abc1-2dd5885deec1/favicon.ico
-name: yolo8demonstration-card
-type: application
-version: 0.0.1-24903487-a8e2-4b41-a9e5-8ae43bc522cb
