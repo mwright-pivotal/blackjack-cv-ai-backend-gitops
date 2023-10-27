@@ -61,7 +61,7 @@ spec:
               key: password
               name: edge-inferencing-events-default-user
               optional: true
-        image: harbor.eqix.vmwedge.com/apps/blackjack-frontend-wrightmi@sha256:86dc3f853c0c8d1893c2164ec7e04e977f5a1a7bc7d72310e0c6866d8fa97698
+        image: harbor.eqix.vmwedge.com/apps/blackjack-frontend-wrightmi@sha256:bc150388757cb4e4c100d75cfce8308ac6a5d262dbcf7ec443814edcbb1e6d4c
         name: workload
         resources: {}
         securityContext:
