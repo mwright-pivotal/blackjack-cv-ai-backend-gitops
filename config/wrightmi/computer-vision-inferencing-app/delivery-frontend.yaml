@@ -62,7 +62,7 @@ spec:
               key: password
               name: edge-inferencing-events-default-user
               optional: true
-        image: harbor.services.edge.wrightcode.io:9443/apps/blackjack-frontend-wrightmi@sha256:237ac6f2586baa83e7b8777f5244ddf260ec57b21b8a9a90aae3e0841393f695
+        image: harbor.services.edge.wrightcode.io:9443/apps/blackjack-frontend-wrightmi@sha256:bc150388757cb4e4c100d75cfce8308ac6a5d262dbcf7ec443814edcbb1e6d4c
         name: workload
         resources: {}
         securityContext:
