@@ -88,7 +88,7 @@ spec:
     apps.tanzu.vmware.com/workload-type: server
     carto.run/workload-name: blackjack-frontend
   ports:
-  - targetPort: 8080
-    port: 8080
+  - targetPort: 8888
+    port: 8888
     name: http
   type: NodePort
