@@ -39,7 +39,7 @@ spec:
       containers:
       - env:
         - name: PYTHONUNBUFFERED
-          value: 1
+          value: "1"
         - name: ACCELERATION_DEVICE
           value: GPU
         - name: INFERENCING_MODEL
