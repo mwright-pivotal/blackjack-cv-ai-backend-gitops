@@ -14,6 +14,7 @@ spec:
       - rabbitmq_management
       - rabbitmq_prometheus
       - rabbitmq_stream
+      - rabbitmq_mqtt
   persistence:
     storageClassName: local-path
   affinity:
