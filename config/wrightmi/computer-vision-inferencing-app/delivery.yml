@@ -74,7 +74,7 @@ spec:
               name: source-info
               key: video-source
               optional: true
-        image: harbor.services.edge.wrightcode.io:9443/apps/computer-vision-inferencing-app-wrightmi@sha256:dbab2b19cbc3be62d28955a1aa1970782bc8f39b0a6da6a7a5ba4a1d352e81be
+        image: harbor.services.edge.wrightcode.io:9443/apps/computer-vision-inferencing-app-wrightmi@sha256:d70e9085a58281ef9a41def16440c616ea4cd835e054ee6b0360df81302e48b4
         name: workload
         resources:
           limits:
