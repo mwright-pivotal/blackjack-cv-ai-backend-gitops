@@ -28,6 +28,9 @@ spec:
   upgrade:
     remediation:
       remediateLastFailure: true
+  install:
+    remediation:
+      retries: -1
   test:
     enable: true
   values:
