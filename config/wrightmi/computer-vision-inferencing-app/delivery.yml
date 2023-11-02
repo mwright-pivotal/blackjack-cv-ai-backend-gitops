@@ -38,6 +38,10 @@ spec:
     spec:
       containers:
       - env:
+        - name: RMQ_EXCHANGE
+          value: "cv-exchange"
+        - name: RMQ_VHOST
+          value: "edge-vhost"
         - name: PYTHONUNBUFFERED
           value: "1"
         - name: ACCELERATION_DEVICE
@@ -74,7 +78,7 @@ spec:
               name: source-info
               key: video-source
               optional: true
-        image: harbor.services.edge.wrightcode.io:9443/apps/computer-vision-inferencing-app-wrightmi@sha256:93cc7da7f24f4264df34030cc7c1131a9449c9c0fc4c441ff3ed91f388634e6b
+        image: harbor.services.edge.wrightcode.io:9443/apps/computer-vision-inferencing-app-wrightmi@sha256:73f1882449558a4ec3cc09284f83ca9b4596121afdf88983155ae4480082ac60
         name: workload
         resources:
           limits:
