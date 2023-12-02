@@ -37,6 +37,6 @@ spec:
     ociRegistry:
       username: admin
       password: dummy
-      registry: "harbor.services.edge.wrightcode.io:9443"
+      registry: "harbor.services.edge.wrightcode.io"
     image: 
-      repository: harbor.services.edge.wrightcode.io:9443/wallaroo/engines/proxy/wallaroo/ghcr.io/wallaroolabs/standalone-mini
+      repository: harbor.services.edge.wrightcode.io/wallaroo/engines/proxy/wallaroo/ghcr.io/wallaroolabs/standalone-mini
