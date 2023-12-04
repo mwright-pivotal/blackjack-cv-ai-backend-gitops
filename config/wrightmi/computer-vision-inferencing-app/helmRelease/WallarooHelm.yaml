@@ -38,5 +38,7 @@ spec:
       pipelineUrl: harbor.services.edge.wrightcode.io/wallaroo/pipelines/yolo8demonstration-card@sha256:05da537385588121d2ece139f4bedee301d0e48c2707920fbeaf51b887ed6acb
     ociRegistry:
       registry: "harbor.services.edge.wrightcode.io"
+      username: user
+      password: password
     image: 
       repository: harbor.services.edge.wrightcode.io/wallaroo/engines/proxy/wallaroo/ghcr.io/wallaroolabs/standalone-mini
