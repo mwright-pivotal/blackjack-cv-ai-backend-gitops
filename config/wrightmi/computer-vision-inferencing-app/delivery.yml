@@ -49,7 +49,7 @@ spec:
         - name: INFERENCING_MODEL
           value: models/quantized_cards_detect-1023
         - name: INFERENCE_URL
-          value: http://engine-svc:9000
+          value: http://engine-svc:8080
         - name: AMQP_HOSTNAME
           valueFrom:
             secretKeyRef:
