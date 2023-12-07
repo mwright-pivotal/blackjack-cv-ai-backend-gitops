@@ -48,6 +48,8 @@ spec:
           value: GPU
         - name: INFERENCING_MODEL
           value: models/quantized_cards_detect-1023
+        - name: INFERENCE_URL
+          value: http://engine-svc:9000
         - name: AMQP_HOSTNAME
           valueFrom:
             secretKeyRef:
@@ -79,7 +81,7 @@ spec:
               key: video-source
               optional: true
         # image: harbor.services.edge.wrightcode.io:9443/apps/computer-vision-inferencing-app-wrightmi@sha256:526a1d36931887ce5afa35a52b8258f93e92bda147fc7fbbf100564b9c8a22d4
-        image: mwrightpivotal/wallaroo_detect:latest
+        image: mwrightpivotal/wallaroo_detect:v0.1
         name: workload
         resources:
           limits:
