@@ -35,6 +35,9 @@ spec:
     enable: true
   values:
     engine:
+      extraEnv:
+      - name: RUST_LOG
+        value: trace
       pipelineUrl: harbor.services.edge.wrightcode.io/wallaroo/pipelines/yolo8demonstration-card:latest
     ociRegistry:
       registry: "harbor.services.edge.wrightcode.io"
@@ -43,3 +46,5 @@ spec:
     image: 
       repository: harbor.services.edge.wrightcode.io/wallaroo/engines/standalone-mini
       tag: release-2023.4.0
+    service:
+      type: NodePort
