@@ -41,4 +41,4 @@ spec:
       username: edge
       password: P@ssw0rd
     image: 
-      repository: harbor.services.edge.wrightcode.io/wallaroo/engines/standalone-mini:release-2023.4.0
+      repository: harbor.services.edge.wrightcode.io/wallaroo/engines/standalone-mini@sha256:a245cab2f6a17805f7005b7e27dfe1afe3758d2bf8469903f82c40b3286bd92d
