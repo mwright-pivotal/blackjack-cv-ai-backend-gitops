@@ -48,3 +48,4 @@ spec:
       tag: release-2023.4.0
     service:
       type: NodePort
+      port: 30080
