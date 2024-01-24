@@ -62,6 +62,8 @@ spec:
               key: password
               name: edge-inferencing-events-default-user
               optional: true
+        - name: JUPYTER_RUNTIME_DIR
+          value: "~/.runtime"
         image: mwrightpivotal/blackjack-frontend:2.0
         name: workload
         resources: {}
