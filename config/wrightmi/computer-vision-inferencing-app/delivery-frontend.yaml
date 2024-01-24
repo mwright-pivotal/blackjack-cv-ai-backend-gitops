@@ -66,6 +66,8 @@ spec:
           value: "/workspace"
         - name: JUPYTER_DATA_DIR
           value: "/workspace"
+        - name: HOME
+          value: "/workspace"
         image: mwrightpivotal/blackjack-frontend:2.0
         name: workload
         resources: {}
