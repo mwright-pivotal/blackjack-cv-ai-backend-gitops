@@ -68,7 +68,7 @@ spec:
           value: "/workspace"
         - name: HOME
           value: "/workspace"
-        image: mwrightpivotal/blackjack-frontend:2.0
+        image: mwrightpivotal/blackjack-frontend:2.1
         name: workload
         resources: {}
         securityContext:
