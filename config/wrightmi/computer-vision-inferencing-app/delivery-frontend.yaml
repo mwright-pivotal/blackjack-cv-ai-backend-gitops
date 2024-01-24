@@ -68,8 +68,6 @@ spec:
           value: "/workspace"
         - name: HOME
           value: "/workspace"
-        - name: PATH
-          value: "${PATH}:/workspace/.local/bin"
         image: mwrightpivotal/blackjack-frontend:2.0
         name: workload
         resources: {}
