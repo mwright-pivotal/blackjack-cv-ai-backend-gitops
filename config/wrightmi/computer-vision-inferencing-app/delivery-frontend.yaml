@@ -64,6 +64,8 @@ spec:
               optional: true
         - name: JUPYTER_RUNTIME_DIR
           value: "/workspace"
+        - name: JUPYTER_DATA_DIR
+          value: "/workspace"
         image: mwrightpivotal/blackjack-frontend:2.0
         name: workload
         resources: {}
