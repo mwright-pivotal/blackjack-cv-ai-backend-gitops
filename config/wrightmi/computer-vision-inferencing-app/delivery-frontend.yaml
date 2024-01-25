@@ -74,7 +74,7 @@ spec:
           limits:
             squat.ai/serial: "1"
         securityContext:
-          runAsUser: 1000
+          runAsUser: 0
       serviceAccountName: default
 ---
 apiVersion: v1
