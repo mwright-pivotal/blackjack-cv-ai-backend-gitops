@@ -68,7 +68,7 @@ spec:
           value: "/workspace"
         - name: HOME
           value: "/workspace"
-        image: mwrightpivotal/blackjack-frontend:2.3
+        image: mwrightpivotal/blackjack-frontend:2.4
         name: workload
         resources:
           limits:
